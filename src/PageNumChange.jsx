@@ -5,7 +5,7 @@ type Props = {
     total: Number
 }
 export default class PageNumChange extends React.Component {
-  props: Props
+  props: Props;
   constructor (props) {
     super(props)
     this.pageSizeChange = this.pageSizeChange.bind(this)
