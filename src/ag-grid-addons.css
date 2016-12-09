@@ -68,39 +68,41 @@
     border-right: 8px solid #383838;
     border-bottom: 8px solid transparent;
 }
-#centerRow .ag-root {
+/**/
+#center .ag-root {
   border: 1px solid #e9e9e9;
   color: #666;
 }
-#centerRow .ag-header-icon {
+#center .ag-header-icon {
   color: #666;
   fill: #666;
 }
-#centerRow .ag-header-cell-menu-button:hover {
+#center .ag-header-cell-menu-button:hover {
   border: 1px solid #e9e9e9;
 }
-#centerRow .ag-cell {
+#center .ag-cell {
   border-right: 1px dotted #e9e9e9;
 }
-#centerRow .ag-body .ag-row:hover {
+#center .ag-body .ag-row:hover {
   background-color: #e3f8ff;
 }
-#centerRow .ag-body .ag-row-selected, #centerRow .ag-body .ag-row.ag-row-selected:hover {
+#center .ag-body .ag-row-selected, #center .ag-body .ag-row.ag-row-selected:hover {
   background-color: #84d7f5;
 }
-#centerRow .ag-cell-focus {
+#center .ag-cell-focus {
   border: 1px solid transparent;
   border-right: 1px dotted #e9e9e9;
   outline: none;
 }
-#centerRow .ag-header {
+#center .ag-header {
   background: transparent linear-gradient(#f2f2f2,#f2f2f2) repeat scroll 0 0;
   color: #666;
   border-color: #e9e9e9;
 }
-#centerRow .ag-header-cell {
+#center .ag-header-cell {
   border-right: 1px solid #e9e9e9;
 }
+/**/
 .ag-paging-button {
     border: none;
     height: 30px;
@@ -193,3 +195,17 @@
   border-color: #85b7d9;
   outline: none;
 }
+.filter-box .filter-box-container label {
+  display: block;
+  white-space: nowrap;
+  text-align: justify;
+  padding-left: 30px;
+  color: #666;
+}
+.filter-box .filter-box-container label input {
+  width: auto;
+}
+.filter-box .filter-box-container label input:focus {
+
+}
+
