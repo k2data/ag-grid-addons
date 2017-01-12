@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/k2data/ag-grid-addons",
   "dependencies": {
-    "ag-grid": "git+https://github.com/k2data/ag-grid.git#6.3.0+002",
-    "ag-grid-react": "git+https://github.com/k2data/ag-grid-react.git#6.3.0+002",
+    "ag-grid": "git+https://github.com/k2data/ag-grid.git#6.3.0+004",
+    "ag-grid-react": "git+https://github.com/k2data/ag-grid-react.git#6.3.0+004",
     "moment": "^2.15.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
