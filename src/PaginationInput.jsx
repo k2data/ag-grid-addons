@@ -46,10 +46,10 @@ export default class PaginationInput extends React.Component {
         currentNum = 1
         break
       case 'pre':
-        currentNum = value - 1
+        currentNum = Number(value) - 1
         break
       case 'next':
-        currentNum = value + 1
+        currentNum = Number(value) + 1
         break
       case 'last':
         currentNum = pages
