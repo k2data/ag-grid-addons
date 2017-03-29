@@ -1,28 +1,28 @@
-import React from 'react';
-import './ag-grid-addons.css';
+import React from 'react'
+import './ag-grid-addons.css'
 type Props = {
   total: Number
 }
 export default class TopChangePage extends React.Component {
-  props: Props;
+  props: Props
   state = {
     currentNum: 1
   }
-  render() {
+  render () {
     return (
       <div className="ag-table-top-page-change">
         <button ref="preBtn">
-          <i className="fa fa-angle-left" aria-hidden="true"></i>
+          <i className='fa fa-angle-left' aria-hidden='true' />
         </button>
-          {this.state.currentNum}/{
+        { this.state.currentNum } /{
             this.props.total
               ? this.props.total
                 : '...'
-          }
-        <button ref="nextBtn">
-          <i className="fa fa-angle-right" aria-hidden="true"></i>
+        }
+        <button ref='nextBtn'>
+          <i className='fa fa-angle-right' aria-hidden='true' />
         </button>
       </div>
-    );
+    )
   }
 }

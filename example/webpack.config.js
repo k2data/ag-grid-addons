@@ -1,12 +1,12 @@
 /* eslint-env node */
 /* eslint-global env */
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   devtool: 'cheap-inline-module-source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     path.join(__dirname, './root')
   ],
@@ -45,6 +45,13 @@ module.exports = {
     {
       test: /\.css$/,
       loader: 'style-loader!css-loader'
-    }]
+    },
+    { test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
+      loader: 'url?limit=100000&name=[name].[ext]'
+    }
+    ],
+    resolve: {
+      extensions: ['', '.js', '.jsx', '.css']
+    }
   }
-};
+}

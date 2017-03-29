@@ -208,4 +208,7 @@
 .filter-box .filter-box-container label input:focus {
 
 }
-
+/*分页-style 带输入框*/
+.pagination-input {
+  padding: 10px 0px;
+}

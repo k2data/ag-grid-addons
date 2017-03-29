@@ -54,6 +54,8 @@
 .page-size-container {
   color:#666;
   font-size: 1em;
+  padding: 10px 0px;
+  line-height: 30px;
 }
 
 .tip-message-box::before {
@@ -133,7 +135,8 @@
 }
 .ag-page-size {
     width: 45px;
-    float: left;
+    display: inline-block;
+    /*float: left;*/
     margin-right: 5px;
     position: relative;
 }
@@ -209,3 +212,42 @@
 
 }
 
+/*分页-style 带输入框*/
+.pagination-input {
+  display: inline-block;
+  padding: 10px 0px;
+  color: #b3b3b3;
+}
+.pagination-input button {
+  color: #b3b3b3;
+  border: none;
+  background-color: #fff;
+  height: 30px;
+  /*width: 20px;*/
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+.pagination-input button:hover {
+  background-color: #e6e6e6;
+}
+.pagination-input button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.pagination-change {
+  padding: 0px 10px;
+}
+.pagination-change input {
+  width: 30px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: #666;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 3px;
+}
+.pagination-change input:focus {
+  border-color: #85b7d9;
+}

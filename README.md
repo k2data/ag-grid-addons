@@ -1,7 +1,7 @@
 React Component Boilerplate
 ===========================
 #1.组件
-###ControllBtn，DateFormat， PageNumChange， SearchFilter， TagCellRender， TipTemplate， TopPageChange, CopyOrClick, TableResize, EditCell, StopEdit（待续...）
+###ControllBtn，DateFormat， PageNumChange， SearchFilter， TagCellRender， TipTemplate， TopPageChange, CopyOrClick, TableResize, EditCell, StopEdit, PaginationInput（待续...）
 ### EditCell， StopEdit
 使用方法
 
@@ -132,6 +132,12 @@ React Component Boilerplate
            this.api.sizeColumnsToFit()
          }
        }
+###PaginationInput:
+介绍：介于ag-grid更新太快，且分页区功能不太适合项目，所以单独独立出一个分页功能
+使用方法：
+  import { PaginationInput } from 'ag-grid-addons'
+  。。。。
+具体使用方法请参考项目example中的app
 ###(未完，待续....)
 [![Build Status](https://travis-ci.org/olegakbarov/react-component-boilerplate.svg?branch=master)](https://travis-ci.org/olegakbarov/react-component-boilerplate)
 [![Dependency Status](https://img.shields.io/david/olegakbarov/react-component-boilerplate.svg)](https://david-dm.org/olegakbarov/react-component-boilerplate)

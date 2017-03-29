@@ -1,8 +1,8 @@
 import React from 'react'
 type Props = {
-    pagesize: Array,
-    onChange: Function,
-    total: Number
+  pagesize: Array,
+  onChange: Function,
+  total: Number
 }
 export default class PageNumChange extends React.Component {
   props: Props;
@@ -26,15 +26,14 @@ export default class PageNumChange extends React.Component {
             {
               this.props.pagesize && this.props.pagesize instanceof Array && this.props.pagesize.length !== 0
                 ? this.props.pagesize.sort().map((item, index) => {
-                    return <option key={`size${index}`} value={item}>{item}</option>
-                  })
-                  : ''
-
+                  return <option key={`size${index}`} value={item}>{item}</option>
+                })
+                : ''
             }
           </select>
           <label className="select-arrow" id="forChangeBox">
             <svg width="22px" height="20px" version="1.1" fill="#656D78">
-              <path d="M7 8 L 10 13 L 13 8 Z"></path>
+              <path d="M7 8 L 10 13 L 13 8 Z" />
             </svg>
           </label>
         </div>

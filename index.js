@@ -11,3 +11,4 @@ exports.TableResize = require('./lib/tableResize.js').default;
 exports.CopyOrClick = require('./lib/CopyOrClick.js').default;
 exports.EditCell = require('./lib/EditCell.js').default;
 exports.StopEdit = require('./lib/StopEdit.js').default;
+exports.PaginationInput = require('./lib/PaginationInput.js').default;
