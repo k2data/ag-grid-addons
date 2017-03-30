@@ -158,6 +158,7 @@
     color: #666;
     outline: none;
 }
+
 .ag-fresh input, .ag-fresh select {
     border-radius: 3px;
 }
@@ -170,7 +171,7 @@
     width: 20px;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 0px;
     z-index: 1;
 }
 .filter-box {
@@ -224,6 +225,7 @@
   background-color: #fff;
   height: 30px;
   /*width: 20px;*/
+  padding: 0px 10px;
   font-size: 16px;
   cursor: pointer;
   outline: none;

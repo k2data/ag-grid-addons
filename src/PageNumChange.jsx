@@ -21,7 +21,7 @@ export default class PageNumChange extends React.Component {
     })()
     return (
       <div className='page-size-container'>
-        <div className='ag-page-size'>
+        <span className='ag-page-size'>
           <select id="pageNumChange" defaultValue={selectItem} onChange={this.pageSizeChange}>
             {
               this.props.pagesize && this.props.pagesize instanceof Array && this.props.pagesize.length !== 0
@@ -36,7 +36,7 @@ export default class PageNumChange extends React.Component {
               <path d="M7 8 L 10 13 L 13 8 Z" />
             </svg>
           </label>
-        </div>
+        </span>
         条/页
         <span>
           &nbsp;&nbsp;共{this.props.total}条
