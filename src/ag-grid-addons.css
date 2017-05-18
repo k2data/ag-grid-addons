@@ -212,3 +212,8 @@
 .pagination-input {
   padding: 10px 0px;
 }
+
+/*穿梭框*/
+.transfer-header > li {
+  display: inline-block;
+}

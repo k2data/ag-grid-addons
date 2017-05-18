@@ -13,9 +13,9 @@ const server = new WebpackDevServer(compiler, {
   }
 });
 
-server.listen(3000, 'localhost',  err  => {
+server.listen(8080, 'localhost',  err  => {
   if (err) {
     throw new Error(err);
   }
-  console.log('Listening at localhost:3000'); //eslint-disable-line
+  console.log('Listening at localhost:8080'); //eslint-disable-line
 });

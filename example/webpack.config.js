@@ -6,7 +6,7 @@ const webpack = require('webpack')
 module.exports = {
   devtool: 'cheap-inline-module-source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
     path.join(__dirname, './root')
   ],

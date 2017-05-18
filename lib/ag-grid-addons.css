@@ -1,3 +1,8 @@
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 .page-tab-box{
   padding: 10px;
   text-align: right;
@@ -252,4 +257,39 @@
 }
 .pagination-change input:focus {
   border-color: #85b7d9;
+}
+
+/*穿梭框*/
+.transfer {
+  overflow: hidden;
+  overflow-x: auto;
+  border: 1px solid #666;
+}
+.transfer-header {
+  white-space: nowrap;
+}
+.transfer-header li {
+  display: inline-block;
+  padding: 10px 0px;
+  /*width: 33%;*/
+  text-align: center;
+  background-color: #bbad9e;
+  border-right: 1px solid #e3e3e3;
+}
+.clusterize-content {
+  white-space: nowrap;
+}
+.clusterize-content .item:nth-child(even) {
+  background-color: #eee;
+}
+.clusterize-content .item {
+  /*width: 100%;*/
+  display: block;
+}
+.clusterize-content .item li {
+  display: inline-block;
+  padding: 10px 0px;
+  /*width: 33%;*/
+  border-right: 1px solid #e3e3e3;
+  text-align: center;
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import PaginationInput from '../lib/PaginationInput.js'
 import PageNumChange from '../lib/PageNumChange.js'
+import tagCellRender from '../lib/tagCellRender.js'
+import Transfer from '../lib/Transfer.js'
 // import TopChangePage from '../lib/TopPageChange.js'
 // import AgTable from '../lib/AgTable.js'
 // import ColDefs from '../lib/ColDefs.js'
@@ -55,11 +57,36 @@ export default class App extends React.Component {
         return Number(params.node.id) + 1 + pageSize * (currentPage - 1)
       }},
       {
-        headerName: 'ID', field: 'id'
+        headerName: 'ID', field: 'id',
+        cellRender: function (params) {
+          return `<a href='#'>${params.id}</a>`
+        }
       },
       {
-        headerName: '名称', field: 'name'
+        headerName: '名称', field: 'name', enableCellChangeFlash: true
+      },
+      {
+        headerName: '描述', field: 'description'
+      },
+      {
+        headerName: '创建时间', field: 'createdAt'
+      },
+      {
+        headerName: '更新时间', field: 'updateAt'
+      },
+      {
+        headerName: '标签', field: 'tags', cellRender: (params) => { tagCellRender(params) }
       }
+    ]
+
+    const columnDefs = [
+      {headerName: '序号'},
+      {headerName: '列1', field: 'id'},
+      {headerName: '列2', field: 'aid'},
+      {headerName: '列3', field: 'bid'},
+      {headerName: '列4', field: 'cid'},
+      {headerName: '列5', field: 'did'},
+      {headerName: '列6', field: 'eid'}
     ]
 
     const icons = {
@@ -69,27 +96,52 @@ export default class App extends React.Component {
       // last: 'last'
     }
 
+    const data = (() => {
+      let arr = []
+      for (let i = 0; i < 100000; i++) {
+        arr.push({
+          id: `id${i}`,
+          aid: `aid${i}`,
+          bid: `bid${i}`,
+          cid: `cid${i}`,
+          did: `did${i}`,
+          eid: `eid${i}`
+        })
+      }
+      return arr
+    })()
+
     return (
-      <div style={{ height: '600px', width: '800px' }} className='ag-fresh'>
-        <AgGridReact
-          gridOptions={this.gridOptions}
-          rowData={rowdata}
-          columnDefs={colDefs}
-           />
-        <div>
-          <div style={{ float: 'right' }}>
-            <PaginationInput
-              onChange={this.pageChange}
-              icons={icons}
-              pages={pages} />
-          </div>
-          <div style={{ float: 'left' }}>
-            <PageNumChange
-              pagesize={[20, 10, 50]}
-              total={total}
-              onChange={this.pageSizeChange}
-              />
-          </div>
+      <div>
+        <div style={{ height: '600px', width: '800px' }} className='ag-fresh'>
+          <AgGridReact
+            gridOptions={this.gridOptions}
+            rowData={rowdata}
+            columnDefs={colDefs}
+             />
+          {
+            //  <div style={{ float: 'left', width: '100%' }}>
+            //    <div style={{ float: 'right' }}>
+            //      <PaginationInput
+            //        onChange={this.pageChange}
+            //        icons={icons}
+            //        pages={pages} />
+            //    </div>
+            //    <div style={{ float: 'left' }}>
+            //      <PageNumChange
+            //        pagesize={[20, 10, 50]}
+            //        total={total}
+            //        onChange={this.pageSizeChange}
+            //        />
+            //    </div>
+            //  </div>
+           }
+        </div>
+        <div style={{ height: '200px' }}>
+          <Transfer
+            columnDefs={columnDefs}
+            dataSource={data}
+            />
         </div>
       </div>
     )
